@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\AspNetMinimalApi.Persons\AspNetMinimalApi.Persons.Server\AspNetMinimalApi.Persons.Server.csproj" />
+    <ProjectReference Include="..\..\AspNetMinimalApi.Security\AspNetMinimalApi.Security.Server\AspNetMinimalApi.Security.Server.csproj" />
+    <ProjectReference Include="..\..\AspNetMinimalApi.WeatherForecasts\AspNetMinimalApi.WeatherForecasts.Server\AspNetMinimalApi.WeatherForecasts.Server.csproj" />
+    <ProjectReference Include="..\Client\AspNetMinimalApi.Client.csproj" />
+    <ProjectReference Include="..\Shared\AspNetMinimalApi.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="D:\Documents\Source\BracketShow\AspNetMinimalApi\AspNetMinimalApi\Server\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="AspNetMinimalApi.Tests" />
+  </ItemGroup>
+
+</Project>

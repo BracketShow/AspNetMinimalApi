@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>Preview</LangVersion>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+
+    <RootNamespace>AspNetMinimalApi.Security</RootNamespace>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="bunit" Version="1.1.5" />
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0-release-20210626-04" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="3.0.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Client\Components\" />
+    <Folder Include="Client\Pages\" />
+    <Folder Include="Client\Services\" />
+    <Folder Include="Domain\" />
+    <Folder Include="Shared\" />
+    <Folder Include="Server\" />
+    <Folder Include="Persistence\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AspNetMinimalApi.Security.Domain\AspNetMinimalApi.Security.Domain.csproj" />
+    <ProjectReference Include="..\AspNetMinimalApi.Security.Server\AspNetMinimalApi.Security.Server.csproj" />
+    <ProjectReference Include="..\AspNetMinimalApi.Security.Shared\AspNetMinimalApi.Security.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
